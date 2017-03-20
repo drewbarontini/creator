@@ -12,7 +12,7 @@
     "scss": "node-sass app/assets/stylesheets/app.scss public/stylesheets/app.css",
     "serve": "browser-sync start --proxy 'localhost:4000' --files 'app/views/*.pug, app/assets/stylesheets/*.scss, app/assets/javascripts/*.js'",
     "start": "parallelshell 'npm run serve' 'npm run watch:css' 'npm run watch:js' 'node ./bin/www'",
-    "uglify": "uglifyjs app/assets/javascripts/app.js -m -o public/javascripts/app.js",
+    "uglify": "uglifyjs public/javascripts/app.js",
     "watch:css": "onchange 'app/assets/stylesheets/*.scss' -- npm run build:css",
     "watch:js": "onchange 'app/assets/javascripts/app.js' -- npm run build:js"
   },
