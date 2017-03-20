@@ -16,6 +16,8 @@ const router = express.Router();
 //   Base
 // -------------------------------------
 
+// ----- GET '/' ----- //
+
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'Creator (Multi)' });
 });
