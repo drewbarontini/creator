@@ -9,6 +9,7 @@
     "build:css": "npm run scss && npm run clean-css && npm run autoprefixer",
     "build:js": "npm run babel && npm run uglify",
     "clean-css": "cleancss -o public/stylesheets/app.css public/stylesheets/app.css",
+    "icons": "svgo -f public/images/icons && svg-sprite-generate -d public/images/icons -o public/images/icons/icons.svg",
     "scss": "node-sass -x app/assets/stylesheets/app.scss public/stylesheets/app.css",
     "serve": "browser-sync start --proxy 'localhost:4000' --files 'app/views/*.pug, app/assets/stylesheets/*.scss, app/assets/javascripts/*.js'",
     "start": "parallelshell 'npm run serve' 'npm run watch:css' 'npm run watch:js' 'node ./bin/www'",
@@ -28,14 +29,15 @@
     "debug": "~2.6.0",
     "express": "~4.14.1",
     "morgan": "~1.7.0",
-    "node-sass": "^4.5.0"
+    "node-sass": "^4.5.0",
     "onchange": "^3.2.1",
     "parallelshell": "^2.0.0",
     "postcss-cli": "^3.0.0",
     "pug": "~2.0.0-beta10",
     "serve-favicon": "~2.3.2",
+    "svg-sprite-generator": "0.0.7",
+    "svgo": "^0.7.2",
     "uglify-js": "^2.8.14"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
