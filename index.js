@@ -15,6 +15,7 @@ const cookieParser = require('cookie-parser');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 const path = require('path');
+const setTitle = require('./app/lib/title');
 
 // ----- Routes ----- //
 
@@ -43,6 +44,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// ----- Global Middleware ----- //
+
+app.use((req, res, next) => {
+  res.locals.title = setTitle(req.originalUrl);
+  next();
+});
 
 // -------------------------------------
 //   Routes
