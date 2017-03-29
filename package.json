@@ -11,8 +11,7 @@
     "clean-css": "cleancss -o public/stylesheets/app.css public/stylesheets/app.css",
     "icons": "svgo -f public/images/icons && svg-sprite-generate -d public/images/icons -o public/images/icons/icons.svg",
     "scss": "node-sass -x app/assets/stylesheets/app.scss public/stylesheets/app.css",
-    "serve": "browser-sync start --proxy 'localhost:4000' --files 'app/views/*.pug, app/assets/stylesheets/*.scss, app/assets/javascripts/*.js'",
-    "start": "parallelshell 'npm run serve' 'npm run watch:css' 'npm run watch:js' 'node ./bin/www'",
+    "start": "parallelshell 'npm run watch:css' 'npm run watch:js' 'node ./bin/www'",
     "uglify": "uglifyjs public/javascripts/app.js -o public/javascripts/app.js",
     "watch:css": "onchange 'app/assets/stylesheets/*.scss' -- npm run build:css",
     "watch:js": "onchange 'app/assets/javascripts/app.js' -- npm run build:js"
@@ -22,7 +21,6 @@
     "babel-cli": "^6.24.0",
     "babel-preset-es2015": "^6.24.0",
     "body-parser": "~1.16.0",
-    "browser-sync": "^2.18.8",
     "clean-css": "^4.0.9",
     "clean-css-cli": "^4.0.9",
     "cookie-parser": "~1.4.3",
