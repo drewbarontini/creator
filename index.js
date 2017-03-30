@@ -48,7 +48,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ----- Global Middleware ----- //
 
 app.use((req, res, next) => {
+  res.locals.url = req.path;
   res.locals.title = setTitle(req.originalUrl);
+
   next();
 });
 
