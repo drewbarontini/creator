@@ -5,10 +5,16 @@
 // *************************************
 
 // -------------------------------------
+//   Requires
+// -------------------------------------
+
+const config = require('./constants');
+
+// -------------------------------------
 //   Variables
 // -------------------------------------
 
-const base = 'Creator (Multi)';
+const base = config.SITE_TITLE;
 const separator = '-';
 const titles = {
   '/': 'Multi-page Express application'
