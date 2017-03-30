@@ -10,11 +10,13 @@
 // -------------------------------------
 
 const express = require('express');
+const compression = require('compression');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 const path = require('path');
+const env = require('dotenv').config();
 const setTitle = require('./app/lib/title');
 
 // ----- Routes ----- //
@@ -37,6 +39,10 @@ app.set('view engine', 'pug');
 // -------------------------------------
 //   Middleware
 // -------------------------------------
+
+if (process.env.ENV === 'production') {
+  app.use(compression());
+}
 
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
