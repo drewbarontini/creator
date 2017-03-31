@@ -1,0 +1,6 @@
+while message = flash.shift()
+  div
+    p
+      strong= message.type
+      | : 
+      span= message.message

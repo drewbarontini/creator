@@ -11,6 +11,7 @@
 
 const express = require('express');
 const compression = require('compression');
+const session = require('express-session');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const favicon = require('serve-favicon');
@@ -40,6 +41,8 @@ app.set('view engine', 'pug');
 //   Middleware
 // -------------------------------------
 
+// ----- Miscellaneous ----- //
+
 if (process.env.ENV === 'production') {
   app.use(compression());
 }
@@ -50,6 +53,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// ----- Session ----- //
+
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(require('flash')());
 
 // ----- Global Middleware ----- //
 
