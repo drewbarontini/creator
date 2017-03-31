@@ -39,7 +39,8 @@
     "serve-favicon": "~2.3.2",
     "svg-sprite-generator": "0.0.7",
     "svgo": "^0.7.2",
-    "uglify-js": "^2.8.14"
+    "uglify-js": "^2.8.14",
+    "winston": "^2.3.1"
   },
   "devDependencies": {}
 }
