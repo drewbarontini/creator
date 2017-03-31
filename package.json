@@ -12,6 +12,8 @@
     "icons": "svgo -f public/images/icons && svg-sprite-generate -d public/images/icons -o public/images/icons/icons.svg",
     "scss": "node-sass -x app/assets/stylesheets/application.scss public/stylesheets/application.css",
     "start": "parallelshell 'npm run watch:css' 'npm run watch:js' 'node ./bin/www'",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "uglify": "uglifyjs public/javascripts/application.js -o public/javascripts/application.js",
     "watch:css": "onchange 'app/assets/stylesheets/*.scss' -- npm run build:css",
     "watch:js": "onchange 'app/assets/javascripts/application.js' -- npm run build:js"
@@ -30,6 +32,7 @@
     "express": "~4.14.1",
     "express-session": "^1.15.2",
     "flash": "^1.1.0",
+    "jest": "^19.0.2",
     "morgan": "~1.7.0",
     "node-sass": "^4.5.0",
     "onchange": "^3.2.1",
