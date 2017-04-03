@@ -19,5 +19,6 @@ $ cp .env.example .env
 
 ```shell
 $ npm install
+$ npm run build:all
 $ npm start
 ```
