@@ -9,6 +9,12 @@ An Express application to serve up a multi-page site.
 - Compiling ES2015 JavaScript
 - Uglifying JavaScript
 
+## Setup
+
+```shell
+$ cp .env.example .env
+```
+
 ## Go!
 
 ```shell
