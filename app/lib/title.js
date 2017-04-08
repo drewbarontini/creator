@@ -8,17 +8,7 @@
 //   Requires
 // -------------------------------------
 
-const config = require('./constants');
-
-// -------------------------------------
-//   Variables
-// -------------------------------------
-
-const base = config.SITE_TITLE;
-const separator = '-';
-const titles = {
-  '/': 'Multi-page Express application'
-}
+const titles = require('./constants').TITLES;
 
 // -------------------------------------
 //   Functions
@@ -26,9 +16,9 @@ const titles = {
 
 const setTitle = (path) => {
   if (titles[path]) {
-    return `${ base } ${ separator } ${ titles[path] }`;
+    return `${ titles.base } ${ titles.separator } ${ titles[path] }`;
   } else {
-    return `${ base } ${ separator } ${ titles['/'] }`;
+    return `${ titles.base } ${ titles.separator } ${ titles['/'] }`;
   }
 }
 
