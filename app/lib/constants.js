@@ -5,9 +5,5 @@
 // *************************************
 
  module.exports = {
-   TITLES: {
-     base: 'Creator (Multi)',
-     separator: '-',
-     '/': 'Multi-page Express Application'
-   }
+   TITLE: 'Creator (Multi)'
  };

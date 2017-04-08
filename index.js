@@ -18,7 +18,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const path = require('path');
 const env = require('dotenv').config();
-const setTitle = require('./app/lib/title');
+const setMeta = require('./app/lib/meta');
 
 // ----- Routes ----- //
 
@@ -67,7 +67,7 @@ app.use(require('flash')());
 
 app.use((req, res, next) => {
   res.locals.url = req.path;
-  res.locals.title = setTitle(req.originalUrl);
+  res.locals.title = setMeta(req.originalUrl, 'title');
 
   next();
 });
