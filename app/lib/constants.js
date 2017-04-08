@@ -5,5 +5,6 @@
 // *************************************
 
  module.exports = {
-   TITLE: 'Creator (Multi)'
+   TITLE: 'Creator (Multi)',
+   ENV: 'development'
  };
