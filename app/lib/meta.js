@@ -52,7 +52,10 @@ const setMeta = (path, key) => {
 }
 
 // -------------------------------------
-//   Export
+//   Exports
 // -------------------------------------
 
-module.exports = setMeta;
+module.exports = {
+  filterArrayFor,
+  setMeta
+};
