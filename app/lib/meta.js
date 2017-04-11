@@ -10,6 +10,7 @@
 
 const title = require('./constants').TITLE;
 const meta = require('../data/meta');
+const filterArrayFor = require('./helpers').filterArrayFor;
 
 // -------------------------------------
 //   Variables
@@ -19,22 +20,12 @@ const separator = '-';
 const rootPath = '/';
 
 // -------------------------------------
-//   Functions
+//   Base
 // -------------------------------------
 
-// ----- Filter Array For ----- //
-
-const filterArrayFor = (path) => {
-  return meta.filter(item => (
-    item.path === path
-  ))[0];
-}
-
-// ----- Set Meta ----- //
-
 const setMeta = (path, key) => {
-  const selection = filterArrayFor(path);
-  const root = filterArrayFor(rootPath);
+  const selection = filterArrayFor(meta, 'path', path);
+  const root = filterArrayFor(meta, 'path', rootPath);
 
   if (selection) {
     if (key === 'title') {
@@ -55,7 +46,4 @@ const setMeta = (path, key) => {
 //   Exports
 // -------------------------------------
 
-module.exports = {
-  filterArrayFor,
-  setMeta
-};
+module.exports = setMeta;
