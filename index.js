@@ -44,7 +44,7 @@ app.set('view engine', 'pug');
 //   Middleware
 // -------------------------------------
 
-// ----- Miscellaneous ----- //
+// ----- Compression ----- //
 
 if (process.env.ENV === 'production') {
   app.use(compression());
