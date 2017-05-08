@@ -11,6 +11,7 @@
 
 const express = require('express');
 const router = express.Router();
+const homeController = require('../controllers/home');
 
 // -------------------------------------
 //   Base
@@ -18,9 +19,7 @@ const router = express.Router();
 
 // ----- GET '/' ----- //
 
-router.get('/', (req, res, next) => {
-  res.render('index');
-});
+router.get('/', homeController.root);
 
 // -------------------------------------
 //   Exports
