@@ -19,9 +19,10 @@ const logger = require('morgan');
 const path = require('path');
 const env = require('dotenv').config();
 
-// ----- Library ----- //
+// ----- Controllers ----- //
 
-const setMeta = require('./app/lib/meta');
+const dataController = require('./app/controllers/data');
+const errorController = require('./app/controllers/error');
 
 // ----- Routes ----- //
 
@@ -75,40 +76,30 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));
+
+// Flash
+
 app.use(require('flash')());
 
 // ----- Locals ----- //
 
-app.use((req, res, next) => {
-  res.locals.url = req.path;
-  res.locals.title = setMeta(req.originalUrl, 'title');
-
-  next();
-});
+app.use(dataController.locals);
 
 // -------------------------------------
 //   Routes
 // -------------------------------------
 
+// ----- Index ----- //
+
 app.use('/', index);
 
-// ----- 404 ----- //
+// ----- Errors ----- //
 
-app.use((req, res, next) => {
-  const err = new Error('Not Found');
+app.use(errorController.notFound);
+app.use(errorController.handler);
 
-  err.status = 404;
-  next(err);
-});
-
-// ----- Error Handler ----- //
-
-app.use((err, req, res, next) => {
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  res.status(err.status || 500);
-  res.render('error');
-});
+// -------------------------------------
+//   Exports
+// -------------------------------------
 
 module.exports = app;
