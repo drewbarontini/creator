@@ -1,6 +1,6 @@
 const helpers = require('./helpers');
 
-describe('filterArrayFor()', () => {
+describe('helpers.filterArrayFor()', () => {
   test('Should filter the array for the correct object', () => {
     const actual = [
       { path: '/', title: 'Home' },
