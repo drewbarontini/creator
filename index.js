@@ -50,11 +50,22 @@ if (process.env.ENV === 'production') {
   app.use(compression());
 }
 
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// ----- Logger ----- //
+
 app.use(logger('dev'));
+
+// ----- Body Parser ----- //
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// ----- Cookies ----- //
+
 app.use(cookieParser());
+
+// ----- Static ----- //
+
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // ----- Session ----- //
@@ -66,7 +77,7 @@ app.use(session({
 }));
 app.use(require('flash')());
 
-// ----- Global Middleware ----- //
+// ----- Locals ----- //
 
 app.use((req, res, next) => {
   res.locals.url = req.path;
