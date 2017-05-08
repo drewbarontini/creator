@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.4.0 - 2017-05-08
+
+### Added
+
+- View helpers in `app/lib/view-helpers.js`
+
+### Changed
+
+- The comment for `helpers.filterArrayFor()` test
+
 ## 1.3.0 - 2017-05-08
 
 ### Added
