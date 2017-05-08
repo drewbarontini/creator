@@ -1,8 +1,8 @@
 # Change Log
 
-## Unreleased
+## 1.1.0 - 2017-05-08
 
-Everything is up-to-date!
+- `nodemon` package to watch for changes
 
 ## 1.0.0 - 2017-04-24
 
