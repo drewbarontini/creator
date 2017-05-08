@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.1 - 2017-05-08
+
+### Changed
+
+- Removed `next` parameter from the home controller
+
 ## 1.2.0 - 2017-05-08
 
 ### Added
