@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.3.0 - 2017-05-08
+
+### Added
+
+- Data controller
+- Error controller
+
 ## 1.2.1 - 2017-05-08
 
 ### Changed
