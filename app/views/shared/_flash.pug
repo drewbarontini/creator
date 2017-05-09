@@ -3,4 +3,4 @@ while message = flash.shift()
     p
       strong= message.type
       | : 
-      span= message.message
+      span!= message.message
