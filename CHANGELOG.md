@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.4.2 - 2017-05-08
+
+### Changed
+
+- `homeController.root` method name
+
 ## 1.4.1 - 2017-05-08
 
 ### Added
