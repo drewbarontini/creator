@@ -19,7 +19,7 @@ const homeController = require('../controllers/home');
 
 // ----- GET '/' ----- //
 
-router.get('/', homeController.root);
+router.get('/', homeController.index);
 
 // -------------------------------------
 //   Exports
