@@ -1,5 +1,11 @@
 # Change Log
 
+## Unreleased
+
+### Changed
+
+- Updated the flash message content to allow HTML
+
 ## 1.4.2 - 2017-05-08
 
 ### Changed
