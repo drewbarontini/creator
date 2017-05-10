@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Added
+
+- `helpers.catchErrors()` function
+
 ### Changed
 
 - Updated the flash message content to allow HTML
