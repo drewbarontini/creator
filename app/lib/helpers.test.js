@@ -11,5 +11,3 @@ describe('helpers.filterArrayFor()', () => {
     expect(helpers.filterArrayFor(actual, 'path', '/about')).toEqual(expected);
   });
 });
-
-
