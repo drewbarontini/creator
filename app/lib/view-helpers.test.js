@@ -6,3 +6,12 @@ describe('viewHelpers.getSiteTitle()', () => {
     expect(viewHelpers.getSiteTitle()).toEqual(config.TITLE);
   });
 });
+
+describe('helpers.pre()', () => {
+  test('Should return a string from an object', () => {
+    const actual = {};
+    const expected = "{}";
+
+    expect(helpers.pre(actual)).toEqual(expected);
+  });
+});

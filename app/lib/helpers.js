@@ -23,11 +23,3 @@ exports.filterArrayFor = (array, key, value) => {
     item[key] === value
   ))[0];
 };
-
-// -------------------------------------
-//   Pre
-// -------------------------------------
-
-exports.pre = (object) => {
-  return JSON.stringify(object, null, 2);
-};

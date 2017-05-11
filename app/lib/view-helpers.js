@@ -17,3 +17,11 @@ const config = require('./constants');
 exports.getSiteTitle = () => {
   return config.TITLE;
 };
+
+// -------------------------------------
+//   Pre
+// -------------------------------------
+
+exports.pre = (object) => {
+  return JSON.stringify(object, null, 2);
+};

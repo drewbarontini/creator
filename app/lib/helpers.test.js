@@ -11,12 +11,3 @@ describe('helpers.filterArrayFor()', () => {
     expect(helpers.filterArrayFor(actual, 'path', '/about')).toEqual(expected);
   });
 });
-
-describe('helpers.pre()', () => {
-  test('Should return a string from an object', () => {
-    const actual = {};
-    const expected = "{}";
-
-    expect(helpers.pre(actual)).toEqual(expected);
-  });
-});
