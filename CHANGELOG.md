@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.5.1 - 2017-05-10
+
+### Changed
+
+- `helpers.pre()` to `viewHelpers.pre()`
+
 ## 1.5.0 - 2017-05-10
 
 ### Added
