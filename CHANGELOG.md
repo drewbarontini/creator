@@ -1,10 +1,11 @@
 # Change Log
 
-## Unreleased
+## 1.5.0 - 2017-05-10
 
 ### Added
 
 - `helpers.catchErrors()` function
+- `helpers.pre()` function
 
 ### Changed
 
