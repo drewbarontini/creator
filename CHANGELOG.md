@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.5.2 - 2017-05-15
+
+### Fixed
+
+- `autoprefixer` NPM script
+
 ## 1.5.1 - 2017-05-10
 
 ### Changed
