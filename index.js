@@ -9,6 +9,10 @@
 //   Requires
 // -------------------------------------
 
+if (process.env.ENV !== 'production') {
+  require('@glimpse/glimpse').init();
+}
+
 const express = require('express');
 const compression = require('compression');
 const session = require('express-session');
