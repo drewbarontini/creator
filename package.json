@@ -50,6 +50,10 @@
   "devDependencies": {
     "@glimpse/glimpse": "^0.20.9"
   },
+  "engines": {
+    "node": "7.10.0",
+    "npm": "4.2.0"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions"
