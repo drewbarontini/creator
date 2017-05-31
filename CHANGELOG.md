@@ -1,5 +1,11 @@
 # Change Log
 
+## Unreleased
+
+### Added
+
+- Glimpse!
+
 ## 1.5.2 - 2017-05-15
 
 ### Fixed
