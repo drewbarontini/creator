@@ -5,6 +5,7 @@
 ### Added
 
 - Glimpse!
+- `engines` to `package.json`
 
 ## 1.5.2 - 2017-05-15
 
