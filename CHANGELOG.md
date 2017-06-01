@@ -6,6 +6,7 @@
 
 - Glimpse!
 - `engines` to `package.json`
+- `IE 10` to `browserslist` in `package.json`
 
 ## 1.5.2 - 2017-05-15
 
